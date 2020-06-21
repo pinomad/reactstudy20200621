@@ -27,6 +27,9 @@ function Todo() {
       case FILTERS[2]: {
         return setFilteredTodos(todos.filter((todo) => todo.isDone))
       }
+      default: {
+        return setFilteredTodos([...todos])
+      }
     }
   }, [filter, todos])
 
